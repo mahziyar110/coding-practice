@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="deck" class="img-holder"></div>
+    <div id="suit" class="img-holder">
+        <img id="100" ondrop="drop(event)" ondragover="allowDrop(event)"
+            src="https://raw.githubusercontent.com/Newton-School/Deck_of_Cards/main/JPEG/club.png">
+        <img id="101" ondrop="drop(event)" ondragover="allowDrop(event)"
+            src="https://raw.githubusercontent.com/Newton-School/Deck_of_Cards/main/JPEG/diamond.jpg">
+        <img id="102" ondrop="drop(event)" ondragover="allowDrop(event)"
+            src="https://raw.githubusercontent.com/Newton-School/Deck_of_Cards/main/JPEG/heart.png">
+        <img id="103" ondrop="drop(event)" ondragover="allowDrop(event)"
+            src="https://raw.githubusercontent.com/Newton-School/Deck_of_Cards/main/JPEG/spade.png">
+    </div>
+    <h1 id="msg" style="display: none;">You Won</h1>
+    <button id="restart-button" style="display: none;" onclick="restart()">Restart</button>
+    <script src="./index.js"></script>
+</body>
+
+</html>

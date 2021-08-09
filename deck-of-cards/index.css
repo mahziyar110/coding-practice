@@ -1,0 +1,20 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+.img-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#suit {
+    margin: 15px;
+    justify-content: space-evenly;
+}
+
+#suit img {
+    width: 100px;
+    height: 150px;
+}

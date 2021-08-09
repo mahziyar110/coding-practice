@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                margin: 0;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+
+            #main-container {
+                background-color: lightgray;
+            }
+
+            #header {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #textarea {
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 50vh;
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="header">
+                <div id="heading" >Online Notepad</div>
+                <div>
+                    <label for="checkbox1">Save My Notes</label>
+                    <input id="feature-flag" type="checkbox" name="checkbox1">
+                </div>
+
+            </div>
+            <textarea id="textarea" name="text-area" placeholder="Write your notes here"></textarea>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>

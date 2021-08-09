@@ -1,0 +1,9 @@
+* {
+    margin: 5px;
+    padding: 0;
+}
+
+.img-div {
+    display: flex;
+    flex-wrap: wrap;
+}
