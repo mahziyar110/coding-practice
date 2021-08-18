@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Online Notepad</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 5px;
-                box-sizing: border-box;
-            }
 
-            #main-container {
-                background-color: lightgray;
-            }
+<head>
+    <title>Online Notepad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 5px;
+            box-sizing: border-box;
+        }
 
-            #header {
-                display: flex;
-                justify-content: space-between;
-            }
+        #main-container {
+            background-color: lightgray;
+        }
 
-            #textarea {
-                min-width: 100%;
-                max-width: 100%;
-                min-height: 50vh;
-                overflow: scroll;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="main-container">
-            <div id="header">
-                <div id="heading" >Online Notepad</div>
-                <div>
-                    <label for="checkbox1">Save My Notes</label>
-                    <input id="feature-flag" type="checkbox" name="checkbox1">
-                </div>
+        #header {
+            display: flex;
+            justify-content: space-between;
+        }
 
+        #textarea {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 50vh;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="header">
+            <div id="heading">Online Notepad</div>
+            <div>
+                <label for="checkbox1">Save My Notes</label>
+                <input id="feature-flag" type="checkbox" name="checkbox1">
             </div>
-            <textarea id="textarea" name="text-area" placeholder="Write your notes here"></textarea>
+
         </div>
-        <script src="./index.js"></script>
-    </body>
+        <textarea id="textarea" name="text-area" placeholder="Write your notes here"></textarea>
+    </div>
+    
+    <script>
+        const text = document.querySelector("#textarea");
+        const localData = localStorage.getItem("autosave-data");
+
+        text.value = localData;
+
+        const checkBox = document.querySelector("#feature-flag");
+
+        checkBox.addEventListener("change", function () {
+            if (checkBox.checked) {
+                document.interval = setInterval(() => {
+                    localStorage.setItem("autosave-data", text.value);
+                }, 1000);
+            }
+            else {
+                clearInterval(document.interval)
+            }
+        })
+
+    </script>
+</body>
+
 </html>

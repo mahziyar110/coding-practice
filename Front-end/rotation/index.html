@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: transform 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" onmouseover="rotate()"></div>
+    <script>
+        let clockwise = true;
+        let box = document.querySelector("#box");
+
+        function rotate() {
+            if (clockwise) {
+                box.style.transform = "rotate(180deg)";
+            }
+            else {
+                box.style.transform = "rotate(0deg)";
+            }
+            clockwise = !clockwise;
+        }
+
+    </script>
+</body>
+
+</html>
