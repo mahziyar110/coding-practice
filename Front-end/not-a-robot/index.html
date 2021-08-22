@@ -3,15 +3,29 @@
 
 <head>
     <title>Not A Robot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             margin: 5px;
             padding: 0;
         }
 
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .img-div {
             display: flex;
             flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 450px) {
+            img {
+                width: 100px;
+                height: 100px;
+            }            
         }
     </style>
 </head>
@@ -21,8 +35,10 @@
     <div class="img-div">
 
     </div>
-    <button id="reset" style="display: none;">Reset</button>
-    <button id="btn" style="display: none;">Verify</button>
+    <div>
+        <button id="reset" style="display: none;">Reset</button>
+        <button id="btn" style="display: none;">Verify</button>
+    </div>
 
     <script src="./index.js"></script>
 </body>
