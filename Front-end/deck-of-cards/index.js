@@ -24,7 +24,6 @@ function render() {
     //     renderFromLocal(localArr);
     //     return;
     // }
-    shuffleArray(cardNames);
 
     let imgArr = [];
     let count = 0;
@@ -32,6 +31,7 @@ function render() {
     deck.innerHTML = "";
 
     cardNames.forEach(el => {
+
         let pic = document.createElement("div");
         pic.style.backgroundImage = `url("https://raw.githubusercontent.com/Newton-School/Deck_of_Cards/main/JPEG/${el}.jpg")`;
         pic.style.backgroundSize = "contain";

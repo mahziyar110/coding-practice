@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>
-        Tic Tac Toe
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
+    <head>
+        <title>
+            Tic Tac Toe
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+        
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            min-width: 100vw;
+            height: 100vh;
         }
-
+        
         .grid-container {
             display: grid;
             grid-template-columns: 150px 150px 150px;
+            margin: 5px;
         }
 
         .grid-item {
@@ -74,11 +79,8 @@
         }
 
         @media screen and (max-width: 450px) {
-            body {
-                min-width: 100vw;
-            }
             .grid-container {
-                width: 100%;
+                width: 100vw;
                 grid-template-columns: auto auto auto;
 
             }            
