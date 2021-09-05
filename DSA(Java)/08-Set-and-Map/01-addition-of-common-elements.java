@@ -22,33 +22,28 @@ import java.util.*; // contains Collections framework
 // don't change the name of this class
 // you can add inner classes if needed
 class Main {
-	public static void main (String[] args) {
-    // Your code here
-	Scanner sc = new Scanner(System.in);
-	int n = sc.nextInt();
-	int m = sc.nextInt();
-	int sum = 0;
-	HashSet<Integer> hm1 = new HashSet<>();
-	HashSet<Integer> hm2 = new HashSet<>();
-	for(int i=0; i<n; i++)
-	{
-		hm1.add(sc.nextInt());
-	}
-	
-	for(int i=0; i<n; i++)
-	{
-		hm2.add(sc.nextInt());
-	}
-	
-	for(int temp : hm2)
-	{
-		if(hm1.contains(temp))
-		{
-			sum += temp;
+	public static void main(String[] args) {
+		// Your code here
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int sum = 0;
+		HashSet<Integer> hm1 = new HashSet<>();
+		HashSet<Integer> hm2 = new HashSet<>();
+		for (int i = 0; i < n; i++) {
+			hm1.add(sc.nextInt());
 		}
-	}
-	System.out.println(sum);
-	
-	
+
+		for (int i = 0; i < m; i++) {
+			hm2.add(sc.nextInt());
+		}
+
+		for (int temp : hm2) {
+			if (hm1.contains(temp)) {
+				sum += temp;
+			}
+		}
+		System.out.println(sum);
+
 	}
 }
