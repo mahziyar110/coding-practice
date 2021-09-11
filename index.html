@@ -119,6 +119,20 @@
                     color: "#aaaaaa",
                     minDistance: 100,
                     connectParticles: true,
+                    responsive: [{
+                        breakpoint: 800,
+                        options: {
+                            maxParticles: 70,
+                            minDistance: 70,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        options: {
+                            maxParticles: 50,
+                            minDistance: 50,
+                        }
+                    }]
                 }
             );
         };
