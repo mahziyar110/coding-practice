@@ -3,8 +3,30 @@
 
 <head>
     <title>Front End Assignments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: "STIX Two Math", serif;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
         body {
             display: flex;
             justify-content: space-evenly;
@@ -84,6 +106,23 @@
             </li>
         </ul>
     </div>
+
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>window.onload = function () {
+            Particles.init(
+                {
+                    selector: '.background',
+                    maxParticles: 100,
+                    sizeVariations: 3,
+                    speed: 1.0,
+                    color: "#aaaaaa",
+                    minDistance: 100,
+                    connectParticles: true,
+                }
+            );
+        };
+    </script>
 </body>
 
 </html>
