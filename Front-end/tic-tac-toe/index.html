@@ -25,7 +25,7 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: 150px 150px 150px;
+            grid-template-columns: auto auto auto;
             margin: 5px;
         }
 
@@ -79,11 +79,34 @@
             background-color: #FFFFD2;
         }
 
-        @media screen and (max-width: 450px) {
-            .grid-container {
-                width: 100vw;
-                grid-template-columns: auto auto auto;
+        @media screen and (max-width: 450px),
+        screen and (max-height: 550px) {
+            .grid-item {
+                width: 120px;
+                height: 120px;
+            }
+        }
 
+        @media screen and (max-width: 400px),
+        screen and (max-height: 500px) {
+            .grid-item {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media screen and (max-width: 300px),
+        screen and (max-height: 400px) {
+            .grid-item {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        @media screen and (max-height: 300px) {
+            .grid-item {
+                width: 50px;
+                height: 50px;
             }
         }
 
